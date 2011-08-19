@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Step {{ step }}</title>
+</head>
+<body>
+	<h1>STEP {{ step }}</h1>
+    <h1>{{ title}}</h1>
+	<form action="/rsvp/create/create-event-step-{{ step|add:1 }}/" method="POST">
+		{% csrf_token %}
+		<table>
+
+			{{ form.as_table }}
+		</table>
+		<p><input type="submit" value="NEXT>"></p>
+	</form>
+</body>
+</html>

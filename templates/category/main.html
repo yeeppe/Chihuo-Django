@@ -1,0 +1,14 @@
+<div id="content">
+	<div id="inner-content">
+		{% for post in post_list%}
+			<div class="post border clearfix post-normal">
+				<div class="thumbnail-small"><a href="/"><img src="/" alt="some alt" style="width:146px; height:146px;" \></a></div><!-- thumbnail-small-->
+				<h2><a href="/" title="">{{ post.title }}</a></h2>
+				<div class="text-short"><div>{{ post.content }}</div></div><!-- text-short -->
+				<span class="read-more-short"><a href="/">閱讀更多...</a></span>    
+		</div><!-- post border clearfix post-normal -->
+		{% endfor %}
+
+	</div><!-- inner content-->
+
+</div><!-- content-->

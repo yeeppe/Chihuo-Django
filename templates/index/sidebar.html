@@ -1,0 +1,48 @@
+{% load post_filter_tag %}
+<div id="sidebar">
+	<div class="png"><img class="top" src="/static_media/images/sidebar-top.png" width="182" height="10" alt="" /></div>
+	<div class="sidebar-inner">
+		<div class="box">
+			<h2>洛城美食搜搜尋</h2>
+			<ul>
+				{% get_sub_category_of 3 as category_list %}
+				{% for category in category_list %}
+					<li><a href="/">{{category.category_name}}</a></li>
+				{% endfor %}
+			</ul>
+		</div><!-- box-->
+	</div><!-- sidebar-inner -->
+	<div class="png"><img class="top bottom" src="/static_media/images/sidebar-bottom.png" width="182" height="10" alt="" /></div>
+
+	<div class="png"><img class="top" src="/static_media/images/sidebar-top.png" width="182" height="10" alt="" /></div>
+	<div class="sidebar-inner">
+		<div class="box">
+			<h2>爱吃等于爱生活</h2>
+			<ul>
+				{% get_sub_category_of 9 as category_list %}
+				{% for category in category_list %}
+					<li><a href="/">{{category.category_name}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div><!-- sidebar-inner -->
+	<div class="png"><img class="top bottom" src="/static_media/images/sidebar-bottom.png" width="182" height="10" alt="" /></div>
+	
+	<div id="rss-pane">
+		<div class="feedburner">
+			<h2>訂閱我們</h2>
+			<a id="rss-icon" href="/">Subscribe via RSS</a>
+		</div><!-- feedburner-->
+		
+		<div class="feedburner">
+			<p class="margin">當然也可以通過下面的emai的訂閱 XD</p>
+			<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=keithdonegan', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+                <input id="feed-email" type="text" name="email" />
+                <input type="hidden" value="keithdonegan" name="uri" />
+                <input type="hidden" name="loc" value="en_US" />
+                <input id="feed-submit" type="submit" value="" />
+            </form><!-- form -->		
+		</div><!-- feedburner-->
+		
+	</div><!-- rss-pane -->
+</div>

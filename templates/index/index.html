@@ -1,0 +1,14 @@
+{% extends "base/index.html" %}
+
+{% block header %}
+	{% include 'index/header.html' %}
+{% endblock %}
+
+{% block page-wrap %}
+	
+	{% include 'index/sidebar.html' %}
+	{% include 'index/main.html'%}
+	
+{% endblock %}
+
+{% include 'index/footer.html' %}
